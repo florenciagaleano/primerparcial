@@ -35,6 +35,7 @@ export class LoginComponent {
       ){
         this.loginExitoso = 1;
         this.authService.guardarUsuario(this.nuevoUsuario.usuario);
+        console.log("pasa");
         this.goTo('/bienvenida');
         return;
       }

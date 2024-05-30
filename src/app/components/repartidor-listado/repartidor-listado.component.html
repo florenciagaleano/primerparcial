@@ -1,0 +1,21 @@
+<body>
+  <div *ngFor="let repartidor of repartidores" class="repartidor-item">
+    <input
+      type="radio"
+      name="selectedrepartidor"
+      [value]="repartidor.dni"
+      [(ngModel)]="selectedRepartidorDni"
+      (change)="seleccionarRepartidor(repartidor)"
+    />
+    <div class="repartidor-info">
+      <h3>{{ repartidor.nombre }}</h3>
+      <p>{{ repartidor.dni }}</p>
+      <p>{{ repartidor.edad }}</p>
+      <p>{{ repartidor.capacidadTransporte }}</p>
+      <p>{{ repartidor.paisOrigen }}</p>
+      <p>{{ repartidor.unidadPropia }}</p>
+    </div>
+    <app-repartidor-detalle *ngIf="repartidor.dni === selectedRepartidorDni" [repartidor]="repartidor"></app-repartidor-detalle>
+  </div>
+  
+</body>

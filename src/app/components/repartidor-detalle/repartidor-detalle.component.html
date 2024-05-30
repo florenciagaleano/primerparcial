@@ -1,0 +1,11 @@
+<body>
+  <div *ngIf="repartidor">
+    <h3>{{ repartidor?.nombre }}</h3>
+    <p>{{ repartidor?.dni }}</p>
+    <p>{{ repartidor?.edad }}</p>
+    <p>{{ repartidor?.capacidadTransporte }}</p>
+    <p>{{ repartidor?.unidadPropia }}</p>
+    <app-pais-detalle [nombrePais]="repartidor.paisOrigen ?? null"></app-pais-detalle>
+  </div>
+  
+</body>
