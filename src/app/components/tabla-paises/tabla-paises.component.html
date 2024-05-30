@@ -1,0 +1,13 @@
+<div class="grid-container">
+    <div *ngFor="let pais of paisesInfo" class="grid-item">
+      <input
+        type="radio"
+        name="nacionalidad"
+        [value]="pais.nombre"
+        (change)="seleccionarPais(pais.nombre)"
+      />
+      <img [src]="pais.imagen" alt="{{ pais.nombre }} flag" class="img-pais"/>
+      <p>{{ pais.nombre }}</p>
+    </div>
+  </div>
+  
