@@ -24,4 +24,13 @@ export class CustomValidators {
     }
     return null;
   }
+
+  static pesoValidator(control: AbstractControl): ValidationErrors | null {
+    const peso = control.value;
+    if (isNaN(peso) || peso <= 0 || peso < 250 || peso > 1000) {
+      return { invalidCapacity: true };
+    }
+    return null;
+  }
+  
 }

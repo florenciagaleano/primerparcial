@@ -23,8 +23,8 @@
     color: white;
     padding: 0px;
     border-width: 4px;
-    border-color: #d45795;
-    background-color: #f678e3d7;
+    border-color: #909a9d;
+    background-color: #888087d7;
     border-style: hidden;
     border-radius: 6px;
     box-shadow: 0px 0px 11px rgba(190, 187, 187, 0.64);
@@ -36,7 +36,8 @@
     display: block;
     font-family: "Jersey 10 Charted", sans-serif;
     background: none;
-    color: rgb(205, 23, 171);
+    background-color: blue;
+    color: white(15, 33, 236);
     font-size: 45px;
   }
   
@@ -62,7 +63,7 @@
     width: 40%;
     min-width: 320px;
     max-width: 475px;
-    background-color: rgba(255, 192, 203, 0.5);
+    background-color: rgba(213, 230, 233, 0.5);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -78,7 +79,7 @@
   .btn-invitado,
   span {
     background: none;
-    color: rgb(205, 23, 171);
+    color: rgb(180, 214, 218);
     border: none;
     padding: 5px;
     font-weight: bold;

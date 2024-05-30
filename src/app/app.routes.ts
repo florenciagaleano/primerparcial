@@ -3,6 +3,7 @@ import { BienvenidaComponent } from './components/bienvenida/bienvenida.componen
 import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './guards/auth.guard';
 import { RepartidorListadoComponent } from './components/repartidor-listado/repartidor-listado.component';
+import { AdminGuard } from './guards/admin.guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -20,5 +21,13 @@ export const routes: Routes = [
     path: 'repartidores',
     component: RepartidorListadoComponent,
     canActivate: [authGuard],
+  },
+  {
+    path: 'helados',
+    loadComponent: () =>
+      import('./components/listado-helados/listado-helados.component').then(
+        (mod) => mod.ListadoHeladosComponent
+      ),
+    canActivate: [AdminGuard],
   },
 ];

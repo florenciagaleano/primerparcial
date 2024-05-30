@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  input {
+    color: white;
+    padding: 0px;
+    border-width: 4px;
+    border-color: #909a9d;
+    background-color: #888087d7;
+    border-style: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 0px 11px rgba(190, 187, 187, 0.64);
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.75);
+    margin: 10px;
+  }
+  
+  button {
+    cursor: pointer;
+    display: block;
+    font-family: "Jersey 10 Charted", sans-serif;
+    background: none;
+    background-color: blue;
+    color: white(15, 33, 236);
+    font-size: 45px;
+  }
+  
+  
+  form {
+    width: 40%;
+    min-width: 320px;
+    max-width: 475px;
+    background-color: rgba(213, 230, 233, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  
+  button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  

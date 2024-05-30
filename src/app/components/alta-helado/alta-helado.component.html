@@ -1,0 +1,30 @@
+<div>
+    <h2>Alta de Helado</h2>
+    <form [formGroup]="altaHeladoForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="sabor">Sabor</label>
+        <input type="text" id="sabor" formControlName="sabor" required>
+        <div *ngIf="submitted && altaHeladoForm.get('sabor')?.errors">Por favor ingresa un sabor válido.</div>
+      </div>
+      <div>
+        <label for="tipo">Tipo</label>
+        <select id="tipo" formControlName="tipo" required>
+          <option value="agua">Agua</option>
+          <option value="crema">Crema</option>
+        </select>
+        <div *ngIf="submitted && altaHeladoForm.get('tipo')?.errors">Por favor selecciona un tipo válido.</div>
+      </div>
+      <div>
+        <label for="precio">Precio</label>
+        <input type="number" id="precio" formControlName="precio" required>
+        <div *ngIf="submitted && altaHeladoForm.get('precio')?.errors">Por favor ingresa un precio válido.</div>
+      </div>
+      <div>
+        <label for="peso">Peso</label>
+        <input type="number" id="peso" formControlName="peso" required>
+        <div *ngIf="submitted && altaHeladoForm.get('peso')?.errors">Por favor ingresa un peso válido.</div>
+      </div>
+      <button type="submit">Agregar Helado</button>
+    </form>
+  </div>
+  

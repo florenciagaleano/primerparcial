@@ -17,6 +17,7 @@ export class PaisDetalleComponent {
   constructor(private paisesService : PaisesService){}
 
   ngOnInit(): void {
+    //console.log(this.nombrePais);
     this.paisesService.obtenerPais(this.nombrePais).subscribe((data) => {
       this.pais = data;
     });

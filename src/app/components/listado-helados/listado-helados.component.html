@@ -1,0 +1,45 @@
+<div>
+  <header>
+    <h1>Administración de Helados</h1>
+  </header>
+
+  <div>
+    <div *ngFor="let helado of helados">
+      <div>
+        <div>
+          <h3>{{ helado.sabor }}</h3>
+          <p>{{ helado.tipo }}</p>
+          <p>Precio: {{ helado.precio | currency }}</p>
+          <p>Peso: {{ helado.peso }} g</p>
+          <button class="btn-seleccionar" (click)="seleccionarHelado(helado)">
+            Seleccionar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <button (click)="mostrarAlta()">Alta</button>
+    </div>
+    <div>
+      <button [disabled]="!selectedHelado" (click)="mostrarModificar()">Modificar</button>
+    </div>
+    <div>
+      <button [disabled]="!selectedHelado" (click)="mostrarEliminar()">Eliminar</button>
+    </div>
+  </div>
+
+  <div>
+    <div *ngIf="modo === 'alta'">
+      <app-alta-helado (heladoCreado)="agregarHelado($event)"></app-alta-helado>
+    </div>
+    <div *ngIf="modo === 'modificar'">
+      <app-modificar-helado [helado]="selectedHelado"></app-modificar-helado>
+    </div>
+    <div *ngIf="modo === 'eliminar'">
+      <app-eliminar-helado [helado]="selectedHelado"></app-eliminar-helado>
+    </div>
+  </div>
+</div>
